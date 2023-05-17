@@ -238,6 +238,7 @@ body {
 }
 .main section.color--bg .main__vision {
   grid-column: 3/11;
+  color: white;
 }
 .main section.gallery .gallery--items {
   grid-column: 2/12;
