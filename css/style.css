@@ -37,7 +37,7 @@ body {
 /*Header background-image*/
 .header__bg {
   height: 40rem;
-  background-image: url(/img/header__bg.jpg);
+  background-image: url(./img/header__bg.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
