@@ -1022,15 +1022,32 @@ body {
 }
 .main section.contact .contact__content {
   grid-column: 2/12;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.main section.contact .contact__content--right {
+  padding-left: 3rem;
+  border-left: 1px solid #026670;
+}
+.main section.contact .contact__content h4 {
+  margin-block: 0.5em;
+  font-size: 1.5rem;
+}
+.main section.contact .contact__content p {
+  font-size: 1.1rem;
+}
+.main section.contact .contact__content a {
+  color: #026670;
+  text-decoration: underline;
 }
 
 footer {
   grid-column: 2/12;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   text-align: center;
-  margin-block: 2rem;
+  padding-bottom: 4rem;
 }
 footer a, footer a:visited, footer a:hover {
   color: #026670;
