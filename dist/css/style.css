@@ -465,7 +465,7 @@ body {
 }
 .header .header__bg {
   height: 40rem;
-  background-image: url(/img/Me.jpg);
+  background-image: url(https://github.com/jmaurerhdw/MyOwnWebsite/blob/version-2/img/Me.jpg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
