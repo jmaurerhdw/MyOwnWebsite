@@ -474,13 +474,18 @@ body {
         right: 4rem;
         background-color: $clr_light;
     }
-    & .header__bg {
+    & .header__main {
         height: 40rem;
-        background-image: url(https://github.com/jmaurerhdw/MyOwnWebsite/blob/version-2/img/Me.jpg);
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
         position: relative;
+        & .header__bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            & img {
+                object-fit: cover;
+                object-position: top;
+            }
+        }
         &::before {
             position: absolute;
             content: "";
@@ -489,6 +494,7 @@ body {
             top: 2rem;
             left: 4rem;
             background-color: $clr_light;
+            z-index: 10;
         }
         &::after {
             position: absolute;

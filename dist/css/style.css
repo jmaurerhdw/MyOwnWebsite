@@ -463,15 +463,20 @@ body {
   right: 4rem;
   background-color: #edeae5;
 }
-.header .header__bg {
+.header .header__main {
   height: 40rem;
-  background-image: url(https://github.com/jmaurerhdw/MyOwnWebsite/blob/version-2/img/Me.jpg);
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
   position: relative;
 }
-.header .header__bg::before {
+.header .header__main .header__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.header .header__main .header__bg img {
+  object-fit: cover;
+  object-position: top;
+}
+.header .header__main::before {
   position: absolute;
   content: "";
   width: 10rem;
@@ -479,8 +484,9 @@ body {
   top: 2rem;
   left: 4rem;
   background-color: #edeae5;
+  z-index: 10;
 }
-.header .header__bg::after {
+.header .header__main::after {
   position: absolute;
   content: "";
   width: 3px;
@@ -489,25 +495,25 @@ body {
   left: 4rem;
   background-color: #edeae5;
 }
-.header .header__bg .header__navigation {
+.header .header__main .header__navigation {
   position: absolute;
   top: 2rem;
   right: 4rem;
 }
-.header .header__bg .header__navigation .navigation__menu ul {
+.header .header__main .header__navigation .navigation__menu ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   grid-gap: 3rem;
 }
-.header .header__bg .header__navigation .navigation__menu ul li {
+.header .header__main .header__navigation .navigation__menu ul li {
   list-style-type: none;
   font-size: 2rem;
   font-weight: 500;
   position: relative;
 }
-.header .header__bg .header__navigation .navigation__menu ul li a {
+.header .header__main .header__navigation .navigation__menu ul li a {
   position: relative;
   color: #edeae5;
   background: linear-gradient(39deg, rgb(2, 102, 112) 17%, rgb(83, 151, 158) 34%, rgba(255, 255, 255, 0.8762836402) 50%);
@@ -517,11 +523,11 @@ body {
   background-size: 200%;
   transition: background-position 400ms;
 }
-.header .header__bg .header__navigation .navigation__menu ul li a:hover {
+.header .header__main .header__navigation .navigation__menu ul li a:hover {
   background-position: left;
   transition: background-position 400ms;
 }
-.header .header__bg .header__navigation .navigation__menu ul li:not(:last-of-type):before {
+.header .header__main .header__navigation .navigation__menu ul li:not(:last-of-type):before {
   content: "";
   position: absolute;
   height: 3px;
@@ -529,15 +535,15 @@ body {
   background-color: #edeae5;
   bottom: -1.5rem;
 }
-.header .header__bg .header__content {
+.header .header__main .header__content {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.header .header__bg .header__content h1 {
+.header .header__main .header__content h1 {
   padding: 0 0 2rem 4rem;
 }
-.header .header__bg .header__content h1:first-child {
+.header .header__main .header__content h1:first-child {
   padding: 0 0 0 4rem;
 }
 
