@@ -882,6 +882,9 @@ body {
 .main section.gallery .gallery__items .gallery__items--img p a {
   color: #026670;
 }
+.main section.gallery .gallery__items .gallery__items--img p a:hover {
+  text-decoration: underline;
+}
 .main section.gallery .gallery__items .gallery__items--img:nth-child(2n) img {
   grid-column: 2/3;
 }

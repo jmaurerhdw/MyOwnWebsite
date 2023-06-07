@@ -910,8 +910,11 @@ body {
                     grid-row: 2 / 3;
                     font-size: 1.2rem;
                     margin-inline: 3rem;
-                    & a {
+                    & a{
                         color: $clr_primary;
+                        &:hover {
+                            text-decoration: underline;
+                        }
                     }
                 }
                 &:nth-child(2n) {
