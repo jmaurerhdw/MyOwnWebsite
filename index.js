@@ -70,3 +70,27 @@ arrowRight.addEventListener('click', function() {
         galleryZoomImg[0].classList.add('active');
     }
 })
+// Öffnen der Footer-Links
+const footerLink = document.querySelectorAll('.footer__link');
+const footerLinkOpen = document.querySelectorAll('.footer__link--open')
+const footerLinkClose = document.querySelectorAll('.footer__link--close');
+
+footerLink.forEach((link, linkIdx) => {
+    link.addEventListener('click', function(){
+        footerLinkOpen.forEach((linkOpen, linkOpenIdx) => {
+            if (linkIdx == linkOpenIdx) {
+                linkOpen.classList.add('active');
+            }
+        })
+    })
+})
+// Schließen der Footer-Links
+footerLinkClose.forEach((linkClose) => {
+    linkClose.addEventListener('click', function(){
+        footerLinkOpen.forEach(linkOpen => {
+            if (linkOpen.classList.contains('active')) {
+                linkOpen.classList.remove('active')
+            }
+        })
+    })
+})
